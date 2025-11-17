@@ -1,4 +1,4 @@
-# Demo Video of Uni-Admission Android App
+# Welcome To Uni-Admission Android App
 
 Here's a demo video showcasing the features of my Android app Uni-Admission
 
