@@ -13,6 +13,8 @@ import com.example.ca3.ui.adapter.ViewPagerAdapter
 import com.example.ca3.ui.fragments.HomeFragment
 import com.example.ca3.ui.fragments.CartFragment
 import com.example.ca3.ui.fragments.OrdersFragment
+import com.example.ca3.ui.fragments.SettingsFragment
+import com.example.ca3.ui.fragments.UserProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -50,7 +52,9 @@ class MainActivity : AppCompatActivity() {
         val fragments = listOf(
             HomeFragment(),
             CartFragment(),
-            OrdersFragment()
+            OrdersFragment(),
+            UserProfileFragment(),
+            SettingsFragment()
         )
         val titles = listOf("Home", "Cart", "Orders")
 
@@ -67,6 +71,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home -> viewPager.currentItem = 0
                 R.id.nav_cart -> viewPager.currentItem = 1
                 R.id.nav_orders -> viewPager.currentItem = 2
+                R.id.nav_profile -> viewPager.currentItem = 2
+                R.id.nav_settings -> viewPager.currentItem = 2
             }
             drawerLayout.closeDrawers()
             true

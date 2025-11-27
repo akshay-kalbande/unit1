@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.ca3.R
@@ -16,10 +14,7 @@ import com.example.ca3.ui.viewmodel.CartViewModel
 class CartFragment : Fragment() {
 
     private lateinit var viewModel: CartViewModel
-    private lateinit var usernameInput: EditText
-    private lateinit var addressInput: EditText
-    private lateinit var paymentInput: EditText
-    private lateinit var profileDisplay: TextView
+    private lateinit var cartDisplay: TextView
     private lateinit var saveButton: Button
     private lateinit var loadButton: Button
 
@@ -34,12 +29,7 @@ class CartFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(CartViewModel::class.java)
         viewModel.init(requireContext())
-
-        // Initialize UI components
-        usernameInput = view.findViewById(R.id.username_input)
-        addressInput = view.findViewById(R.id.address_input)
-        paymentInput = view.findViewById(R.id.payment_input)
-        profileDisplay = view.findViewById(R.id.profile_display)
+        cartDisplay = view.findViewById(R.id.profile_display)
         saveButton = view.findViewById(R.id.save_profile_btn)
         loadButton = view.findViewById(R.id.load_profile_btn)
 
@@ -49,16 +39,13 @@ class CartFragment : Fragment() {
 
     private fun setupListeners() {
         saveButton.setOnClickListener {
-            val username = usernameInput.text.toString()
-            val address = addressInput.text.toString()
-            val payment = paymentInput.text.toString()
 
-            if (username.isNotEmpty() && address.isNotEmpty() && payment.isNotEmpty()) {
-                viewModel.saveUserProfile(username, address, payment)
-                Toast.makeText(requireContext(), "Profile saved!", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(requireContext(), "Fill all fields", Toast.LENGTH_SHORT).show()
-            }
+//            if (username.isNotEmpty() && address.isNotEmpty() && payment.isNotEmpty()) {
+//                viewModel.saveUserProfile(username, address, payment)
+//                Toast.makeText(requireContext(), "Profile saved!", Toast.LENGTH_SHORT).show()
+//            } else {
+//                Toast.makeText(requireContext(), "Fill all fields", Toast.LENGTH_SHORT).show()
+//            }
         }
 
         loadButton.setOnClickListener {
@@ -66,8 +53,10 @@ class CartFragment : Fragment() {
     }
 
     private fun observeViewModel() {
-        viewModel.userProfile.observe(viewLifecycleOwner) { profile ->
-            profileDisplay.text = profile
+        viewModel.cartItems.observe(viewLifecycleOwner) { cartItems ->
+//            cartDisplay.text = cartItems.map {
+//                ""
+//            }
         }
     }
 }

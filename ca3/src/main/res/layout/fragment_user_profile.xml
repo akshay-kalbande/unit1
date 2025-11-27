@@ -4,6 +4,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Profile (Shared Preferences)"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/username_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/address_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Delivery Address"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/payment_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Payment Method"
+        android:layout_marginBottom="16dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +45,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Save Cart"
+            android:text="Save Profile"
             android:layout_marginEnd="8dp" />
 
         <Button
@@ -23,13 +53,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Load Cart" />
+            android:text="Load Profile" />
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cart Details:"
+        android:text="Profile Details:"
         android:textStyle="bold"
         android:layout_marginBottom="8dp" />
 
@@ -37,7 +67,7 @@
         android:id="@+id/profile_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No Item saved"
+        android:text="No profile saved"
         android:textSize="14sp"
         android:background="#f0f0f0"
         android:padding="8dp" />
