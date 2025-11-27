@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             UserProfileFragment(),
             SettingsFragment()
         )
-        val titles = listOf("Home", "Cart", "Orders")
+        val titles = listOf("Home", "Cart", "Orders", "User", "Settings")
 
         viewPager.adapter = ViewPagerAdapter(this, fragments)
 
@@ -71,8 +71,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home -> viewPager.currentItem = 0
                 R.id.nav_cart -> viewPager.currentItem = 1
                 R.id.nav_orders -> viewPager.currentItem = 2
-                R.id.nav_profile -> viewPager.currentItem = 2
-                R.id.nav_settings -> viewPager.currentItem = 2
+                R.id.nav_profile -> viewPager.currentItem = 3
+                R.id.nav_settings -> viewPager.currentItem = 4
             }
             drawerLayout.closeDrawers()
             true
