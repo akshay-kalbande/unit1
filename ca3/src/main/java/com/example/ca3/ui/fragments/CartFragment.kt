@@ -29,9 +29,9 @@ class CartFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(CartViewModel::class.java)
         viewModel.init(requireContext())
-        cartDisplay = view.findViewById(R.id.profile_display)
-        saveButton = view.findViewById(R.id.save_profile_btn)
-        loadButton = view.findViewById(R.id.load_profile_btn)
+        cartDisplay = view.findViewById(R.id.cart_display)
+        saveButton = view.findViewById(R.id.save_cart_btn)
+        loadButton = view.findViewById(R.id.load_cart_btn)
 
         setupListeners()
         observeViewModel()

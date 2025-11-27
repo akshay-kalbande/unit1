@@ -11,7 +11,7 @@
         android:layout_marginBottom="16dp">
 
         <Button
-            android:id="@+id/save_profile_btn"
+            android:id="@+id/save_cart_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -19,7 +19,7 @@
             android:layout_marginEnd="8dp" />
 
         <Button
-            android:id="@+id/load_profile_btn"
+            android:id="@+id/load_cart_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -34,7 +34,7 @@
         android:layout_marginBottom="8dp" />
 
     <TextView
-        android:id="@+id/profile_display"
+        android:id="@+id/cart_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="No Item saved"
